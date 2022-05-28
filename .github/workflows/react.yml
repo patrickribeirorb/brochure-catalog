@@ -19,12 +19,3 @@ jobs:
       run: | 
         yarn ci
         yarn build --if-present
-    - name: Publish to Registry
-      with:
-        registry: docker.pkg.github.com
-        username: ${{ secrets.GITHUB_USERNAME }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-        dockerfile: Dockerfile-prod
-        tags: latest
-      run: |
-        yarn build
