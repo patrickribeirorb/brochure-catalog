@@ -36,6 +36,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: yarn-build-artifact
+        path: build/
     - 
       name: Display structure of downloaded files
       run: ls -R
