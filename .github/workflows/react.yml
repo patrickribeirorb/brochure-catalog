@@ -20,12 +20,22 @@ jobs:
       run: | 
         yarn ci
         yarn build --if-present
+    - 
+      uses: actions/upload-artifact@v3
+      with:
+        name: yarn-build-artifact
+        path: build
 
   release:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - 
+      uses: actions/download-artifact@v2
+      with:
+        name: yarn-build-artifact
+    - 
+      uses: actions/checkout@v3
     -
       name: Set up QEMU
       uses: docker/setup-qemu-action@v2
