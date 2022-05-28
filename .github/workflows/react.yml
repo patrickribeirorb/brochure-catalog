@@ -36,8 +36,9 @@ jobs:
       name: Login to DockerHub
       uses: docker/login-action@v2
       with:
+        registry: registry.patrick.dev.br
         username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
     -
       name: Build and push
       uses: docker/build-push-action@v3
