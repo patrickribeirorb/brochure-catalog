@@ -22,6 +22,7 @@ jobs:
         yarn build --if-present
 
   release:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
