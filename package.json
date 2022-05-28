@@ -1,6 +1,7 @@
 {
   "name": "brochure-catalog",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
@@ -17,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ci": "yarn install --network-concurrency 1 --network-timeout=30000 --no-progress --non-interactive --silent --prefer-offline"
   },
   "eslintConfig": {
     "extends": [

@@ -1,5 +1,5 @@
 export default function App() {
   return <div className="App">
-    <h1>Brochure Catalog</h1>
+    <h1>Brochure Catalog v2</h1>
   </div>;
 }
