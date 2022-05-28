@@ -17,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ci": "yarn install --network-concurrency 1 --network-timeout=30000 --no-progress --non-interactive --silent --prefer-offline"
   },
   "eslintConfig": {
     "extends": [
