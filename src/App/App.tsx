@@ -1,9 +1,24 @@
 import React from "react";
+import styled from "styled-components";
+import { GlobalStyles } from "./GlobalStyle";
 
-export default function App() {
+import Home from "./Home";
+import Header from "./Layouts/Header";
+
+export default function App(): JSX.Element {
     return (
-        <div className="App">
-            <h1>Brochure Catalog v2</h1>
-        </div>
+        <Container>
+            <GlobalStyles />
+            <Header />
+            <Home />
+        </Container>
     );
 }
+
+const Container = styled.div`
+    font-family: sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+`;
