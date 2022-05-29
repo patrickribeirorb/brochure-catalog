@@ -1,7 +1,12 @@
 import React from "react";
+import styled from "styled-components";
 
-const Home: React.FC = () => {
-    return <h2>Hello</h2>;
+export default function Home(): JSX.Element {
+    return <Page></Page>;
 }
 
-export default Home;
+const Page = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+`;
